@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Solution Group | Professional Irrigation Services in Broward & Dade County</title>
+    <meta name="description" content="Expert irrigation and sprinkler system services in Broward and Dade County, Florida. Licensed professionals offering installation, repair, and maintenance. Free estimates. Call (786) 865-5288 today!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+/* ===================================
+   IRRIGATION SOLUTION GROUP
+   Design System & Styles
+   =================================== */
+
+/* CSS Variables */
+:root {
+    --color-primary: #1B5E7A;
+    --color-primary-dark: #164d63;
+    --color-primary-light: #4DA8DA;
+    --color-secondary: #2E7D32;
+    --color-secondary-dark: #256b29;
+    --color-white: #FFFFFF;
+    --color-off-white: #FAFAFA;
+    --color-beige: #F5F1EB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-400: #9CA3AF;
+    --color-gray-500: #6B7280;
+    --color-gray-700: #374151;
+    --color-gray-900: #1F2937;
+    --color-success: #059669;
+    --color-warning: #D97706;
+    --color-error: #DC2626;
+    --color-whatsapp: #25D366;
+    --font-heading: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+    --font-body: 'Open Sans', 'Segoe UI', system-ui, sans-serif;
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+    --space-4xl: 96px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.2s ease;
+    --transition-slow: 0.3s ease;
+    --container-max: 1280px;
+    --container-padding: 24px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--color-gray-900); background-color: var(--color-white); }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+.container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; color: var(--color-gray-900); }
+h1 { font-size: 3rem; } h2 { font-size: 2.5rem; } h3 { font-size: 1.5rem; } h4 { font-size: 1.25rem; }
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; } h2 { font-size: 1.75rem; } h3 { font-size: 1.25rem; }
+}
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-sm); padding: 14px 28px; font-family: var(--font-body); font-size: 1rem; font-weight: 600; border: none; border-radius: var(--radius-md); cursor: pointer; transition: all var(--transition-base); text-decoration: none; }
+.btn-primary { background: var(--color-secondary); color: var(--color-white); }
+.btn-primary:hover { background: var(--color-secondary-dark); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-secondary { background: transparent; color: var(--color-white); border: 2px solid var(--color-white); }
+.btn-secondary:hover { background: var(--color-white); color: var(--color-primary); }
+.btn-large { padding: 16px 36px; font-size: 1.125rem; }
+.btn-whatsapp { background: var(--color-whatsapp); color: var(--color-white); width: 100%; margin-top: var(--space-lg); }
+.btn-whatsapp:hover { background: #20BA5C; }
+.btn-whatsapp svg { width: 24px; height: 24px; }
+
+/* HEADER */
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--color-white); box-shadow: var(--shadow-sm); transition: box-shadow var(--transition-base); }
+.header.scrolled { box-shadow: var(--shadow-md); }
+.header-content { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+.logo { display: flex; align-items: center; gap: var(--space-sm); font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; color: var(--color-primary); }
+.logo-icon { font-size: 1.5rem; }
+.nav { display: flex; gap: var(--space-xl); }
+.nav-link { font-weight: 500; color: var(--color-gray-700); padding: var(--space-sm) 0; position: relative; transition: color var(--transition-fast); }
+.nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-primary); transition: width var(--transition-base); }
+.nav-link:hover { color: var(--color-primary); }
+.nav-link:hover::after { width: 100%; }
+.header-actions { display: flex; align-items: center; gap: var(--space-lg); }
+.phone-link { display: flex; align-items: center; gap: var(--space-sm); font-weight: 600; color: var(--color-primary); }
+.phone-icon { font-size: 1.25rem; }
+.header-cta { padding: 12px 24px; }
+.mobile-menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: var(--space-sm); }
+.mobile-menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-gray-900); transition: all var(--transition-fast); }
+
+@media (max-width: 1024px) {
+    .nav, .header-cta, .phone-number { display: none; }
+    .mobile-menu-toggle { display: flex; }
+    .nav.active { display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: var(--color-white); padding: var(--space-lg); box-shadow: var(--shadow-lg); gap: var(--space-md); }
+}
+
+/* HERO */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1B5E7A 0%, #2E7D32 100%); padding: 120px var(--container-padding) 80px; }
+.hero-overlay { position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>'); background-size: 100px; opacity: 0.5; }
+.hero-content { position: relative; z-index: 1; text-align: center; max-width: 900px; }
+.hero-title { color: var(--color-white); font-size: 3.5rem; font-weight: 700; margin-bottom: var(--space-lg); text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+.hero-subtitle { color: rgba(255, 255, 255, 0.95); font-size: 1.25rem; margin-bottom: var(--space-2xl); line-height: 1.7; }
+.hero-ctas { display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-2xl); }
+.trust-badges { display: flex; justify-content: center; gap: var(--space-xl); flex-wrap: wrap; }
+.trust-badge { display: flex; align-items: center; gap: var(--space-sm); color: rgba(255, 255, 255, 0.9); font-size: 0.9rem; }
+.trust-badge.emergency-badge { background: rgba(255, 100, 100, 0.25); padding: var(--space-xs) var(--space-md); border-radius: var(--radius-full); border: 1px solid rgba(255, 100, 100, 0.4); }
+.trust-badge.emergency-badge .badge-icon { color: #ff6b6b; }
+.badge-icon { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: rgba(255, 255, 255, 0.2); border-radius: var(--radius-full); font-size: 0.75rem; }
+
+@media (max-width: 768px) {
+    .hero { min-height: auto; padding: 120px var(--container-padding) 60px; }
+    .hero-title { font-size: 2.25rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-ctas { flex-direction: column; align-items: center; }
+    .trust-badges { flex-direction: column; align-items: center; gap: var(--space-md); }
+}
+
+/* SOCIAL PROOF */
+.social-proof { background: var(--color-gray-900); padding: var(--space-2xl) 0; }
+.proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-xl); text-align: center; }
+.proof-item { color: var(--color-white); }
+.proof-number { display: block; font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: var(--color-primary-light); margin-bottom: var(--space-xs); }
+.proof-label { font-size: 0.9rem; color: var(--color-gray-400); text-transform: uppercase; letter-spacing: 0.05em; }
+
+@media (max-width: 768px) {
+    .proof-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+    .proof-number { font-size: 2rem; }
+}
+
+/* SERVICES */
+.services { padding: var(--space-4xl) 0; background: var(--color-off-white); }
+.section-header { text-align: center; max-width: 600px; margin: 0 auto var(--space-3xl); }
+.section-title { margin-bottom: var(--space-md); }
+.section-subtitle { color: var(--color-gray-500); font-size: 1.125rem; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.service-card { background: var(--color-white); border-radius: var(--radius-lg); padding: var(--space-xl); text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--color-gray-200); transition: transform var(--transition-slow), box-shadow var(--transition-slow); }
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-icon { width: 64px; height: 64px; margin: 0 auto var(--space-lg); background: rgba(27, 94, 122, 0.1); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; }
+.service-icon svg { width: 32px; height: 32px; color: var(--color-primary); }
+.service-title { margin-bottom: var(--space-sm); }
+.service-description { color: var(--color-gray-500); font-size: 0.9375rem; line-height: 1.6; }
+.section-cta { text-align: center; margin-top: var(--space-2xl); }
+
+@media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .services-grid { grid-template-columns: 1fr; } }
+
+/* ABOUT */
+.about { padding: var(--space-4xl) 0; }
+.about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-3xl); align-items: start; }
+.about-text { color: var(--color-gray-500); font-size: 1.125rem; margin-bottom: var(--space-xl); line-height: 1.7; }
+.features-list { display: flex; flex-direction: column; gap: var(--space-lg); }
+.feature-item { display: flex; gap: var(--space-md); align-items: flex-start; }
+.feature-item .feature-icon { flex-shrink: 0; width: 32px; height: 32px; background: rgba(46, 125, 50, 0.1); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-secondary); font-weight: 700; }
+.feature-content h4 { margin-bottom: var(--space-xs); }
+.feature-content p { color: var(--color-gray-500); font-size: 0.9375rem; }
+.about-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+.stat-card { background: var(--color-primary); color: var(--color-white); border-radius: var(--radius-lg); padding: var(--space-xl); text-align: center; }
+.stat-number { display: block; font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; margin-bottom: var(--space-xs); }
+.stat-label { font-size: 0.875rem; opacity: 0.9; }
+
+@media (max-width: 1024px) { .about-grid { grid-template-columns: 1fr; } .about-stats { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 768px) { .about-stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* TESTIMONIALS */
+.testimonials { padding: var(--space-4xl) 0; background: var(--color-off-white); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.testimonial-card { background: var(--color-white); border-radius: var(--radius-lg); padding: var(--space-xl); box-shadow: var(--shadow-sm); border: 1px solid var(--color-gray-200); }
+.testimonial-rating { color: #F59E0B; font-size: 1.25rem; margin-bottom: var(--space-md); }
+.testimonial-text { color: var(--color-gray-700); font-style: italic; line-height: 1.7; margin-bottom: var(--space-lg); }
+.testimonial-author { display: flex; align-items: center; gap: var(--space-md); }
+.author-info strong { display: block; color: var(--color-gray-900); }
+.author-info span { font-size: 0.875rem; color: var(--color-gray-500); }
+
+@media (max-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+/* BRANDS & CERTIFICATIONS */
+.brands { padding: var(--space-4xl) 0; background: var(--color-white); }
+.brands-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); margin-bottom: var(--space-2xl); }
+.brand-card { background: var(--color-off-white); border-radius: var(--radius-lg); padding: var(--space-xl); text-align: center; border: 1px solid var(--color-gray-200); transition: transform var(--transition-slow), box-shadow var(--transition-slow); }
+.brand-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.brand-logo { height: 60px; margin-bottom: var(--space-lg); display: flex; align-items: center; justify-content: center; }
+.brand-logo svg { max-width: 180px; max-height: 60px; }
+.brand-card p { color: var(--color-gray-500); font-size: 0.9375rem; line-height: 1.6; }
+.certifications-bar { display: flex; justify-content: center; gap: var(--space-2xl); flex-wrap: wrap; padding: var(--space-xl); background: var(--color-gray-100); border-radius: var(--radius-lg); }
+.cert-item { display: flex; align-items: center; gap: var(--space-sm); font-weight: 500; color: var(--color-gray-700); }
+.cert-icon { font-size: 1.25rem; }
+@media (max-width: 1024px) { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .brands-grid { grid-template-columns: 1fr; } .certifications-bar { gap: var(--space-lg); } }
+
+/* FAQ SECTION */
+.faq { padding: var(--space-4xl) 0; background: var(--color-off-white); }
+.faq-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-md); }
+.faq-item { background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-gray-200); overflow: hidden; transition: box-shadow var(--transition-slow); }
+.faq-item:hover { box-shadow: var(--shadow-md); }
+.faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: var(--space-lg) var(--space-xl); background: none; border: none; cursor: pointer; text-align: left; font-size: 1.0625rem; font-weight: 600; color: var(--color-gray-800); transition: color var(--transition-fast); }
+.faq-question:hover { color: var(--color-primary); }
+.faq-icon { width: 20px; height: 20px; flex-shrink: 0; transition: transform var(--transition-slow); color: var(--color-primary); }
+.faq-item.active .faq-icon { transform: rotate(180deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+.faq-item.active .faq-answer { max-height: 300px; padding: 0 var(--space-xl) var(--space-lg); }
+.faq-answer p { color: var(--color-gray-600); line-height: 1.7; font-size: 0.9375rem; }
+
+/* CTA BANNER */
+.cta-banner { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); padding: var(--space-3xl) 0; }
+.cta-content { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2xl); }
+.cta-text { flex: 1; }
+.cta-text h2 { color: var(--color-white); font-size: 2rem; margin-bottom: var(--space-sm); }
+.cta-text p { color: rgba(255, 255, 255, 0.9); font-size: 1.0625rem; max-width: 500px; }
+.cta-buttons { display: flex; gap: var(--space-md); flex-shrink: 0; }
+.btn-white { background: var(--color-white); color: var(--color-primary); display: inline-flex; align-items: center; gap: var(--space-sm); padding: var(--space-md) var(--space-xl); border-radius: var(--radius-md); font-weight: 600; transition: all var(--transition-fast); }
+.btn-white:hover { background: var(--color-off-white); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-white svg { stroke: var(--color-primary); }
+.btn-outline-white { background: transparent; color: var(--color-white); border: 2px solid var(--color-white); padding: var(--space-md) var(--space-xl); border-radius: var(--radius-md); font-weight: 600; transition: all var(--transition-fast); }
+.btn-outline-white:hover { background: var(--color-white); color: var(--color-primary); }
+@media (max-width: 768px) { .cta-content { flex-direction: column; text-align: center; } .cta-text p { max-width: none; } .cta-buttons { flex-direction: column; width: 100%; } .cta-buttons .btn-white, .cta-buttons .btn-outline-white { width: 100%; justify-content: center; } }
+
+/* SERVICE AREA */
+.service-area { padding: var(--space-3xl) 0; background: var(--color-primary); color: var(--color-white); }
+.service-area .section-title, .service-area .section-subtitle { color: var(--color-white); }
+.service-area .section-subtitle { opacity: 0.9; }
+.areas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2xl); max-width: 600px; margin: 0 auto; }
+.area-column h3 { color: var(--color-white); margin-bottom: var(--space-md); padding-bottom: var(--space-sm); border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
+.area-column ul li { padding: var(--space-sm) 0; opacity: 0.9; }
+.area-note { text-align: center; margin-top: var(--space-xl); opacity: 0.8; font-style: italic; }
+
+/* CONTACT */
+.contact { padding: var(--space-4xl) 0; background: linear-gradient(135deg, #1B5E7A 0%, #164d63 100%); }
+.contact-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-3xl); }
+.contact-form-wrapper { background: var(--color-white); border-radius: var(--radius-xl); padding: var(--space-2xl); box-shadow: var(--shadow-xl); }
+.form-title { margin-bottom: var(--space-sm); }
+.form-subtitle { color: var(--color-gray-500); margin-bottom: var(--space-xl); }
+.form-message { padding: var(--space-md); border-radius: var(--radius-md); margin-bottom: var(--space-lg); }
+.form-message.success { background: rgba(5, 150, 105, 0.1); color: var(--color-success); border: 1px solid var(--color-success); }
+.form-message.error { background: rgba(220, 38, 38, 0.1); color: var(--color-error); border: 1px solid var(--color-error); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+.form-group { margin-bottom: var(--space-lg); }
+.form-label { display: block; font-size: 0.875rem; font-weight: 500; color: var(--color-gray-700); margin-bottom: var(--space-sm); }
+.form-input, .form-select, .form-textarea { width: 100%; padding: 14px 16px; border: 2px solid var(--color-gray-200); border-radius: var(--radius-md); font-family: inherit; font-size: 1rem; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); background: var(--color-white); }
+.form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(27, 94, 122, 0.15); }
+.form-textarea { min-height: 120px; resize: vertical; }
+.radio-group { display: flex; gap: var(--space-lg); padding-top: var(--space-sm); }
+.radio-label { display: flex; align-items: center; gap: var(--space-sm); cursor: pointer; }
+.radio-label input { accent-color: var(--color-primary); }
+.btn-submit { width: 100%; padding: 16px; font-size: 1.125rem; }
+.form-trust { display: flex; justify-content: center; gap: var(--space-lg); margin-top: var(--space-lg); font-size: 0.875rem; color: var(--color-gray-500); }
+.contact-info { color: var(--color-white); }
+.contact-info-title { color: var(--color-white); margin-bottom: var(--space-xl); }
+.contact-item { display: flex; gap: var(--space-md); margin-bottom: var(--space-lg); align-items: flex-start; }
+.contact-item-icon { width: 48px; height: 48px; background: rgba(255, 255, 255, 0.15); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+.contact-item-label { font-size: 0.875rem; opacity: 0.8; margin-bottom: var(--space-xs); }
+.contact-item-value { font-size: 1rem; font-weight: 500; }
+.contact-item-value a { color: var(--color-white); }
+.contact-item-value a:hover { text-decoration: underline; }
+
+@media (max-width: 1024px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-trust { flex-direction: column; align-items: center; gap: var(--space-sm); }
+}
+
+/* FOOTER */
+.footer { background: var(--color-gray-900); color: var(--color-white); padding: var(--space-3xl) 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-2xl); }
+.footer-brand .logo { margin-bottom: var(--space-md); }
+.footer-tagline { color: var(--color-gray-400); font-size: 0.9375rem; line-height: 1.6; margin-bottom: var(--space-lg); }
+.social-links { display: flex; gap: var(--space-md); }
+.social-link { width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; transition: background var(--transition-fast); }
+.social-link:hover { background: var(--color-whatsapp); }
+.social-link svg { width: 20px; height: 20px; }
+.footer-links h4, .footer-contact h4 { color: var(--color-white); font-size: 1rem; margin-bottom: var(--space-lg); text-transform: uppercase; letter-spacing: 0.05em; }
+.footer-links ul li { margin-bottom: var(--space-sm); }
+.footer-links a, .footer-contact a { color: var(--color-gray-400); font-size: 0.9375rem; transition: color var(--transition-fast); }
+.footer-links a:hover, .footer-contact a:hover { color: var(--color-white); }
+.footer-contact p { color: var(--color-gray-400); font-size: 0.9375rem; margin-bottom: var(--space-sm); }
+.footer-bottom { margin-top: var(--space-2xl); padding: var(--space-lg) 0; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; }
+.footer-bottom p { color: var(--color-gray-400); font-size: 0.875rem; margin-bottom: var(--space-xs); }
+
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; text-align: center; } .social-links { justify-content: center; } }
+
+/* WHATSAPP FLOAT */
+.whatsapp-float { position: fixed; bottom: 100px; right: 24px; z-index: 999; width: 60px; height: 60px; background: var(--color-whatsapp); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); transition: transform var(--transition-base), box-shadow var(--transition-base); }
+.whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
+.whatsapp-float svg { width: 32px; height: 32px; fill: var(--color-white); }
+.whatsapp-tooltip { position: absolute; right: 70px; background: var(--color-gray-900); color: var(--color-white); padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md); font-size: 0.875rem; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity var(--transition-fast), visibility var(--transition-fast); }
+.whatsapp-float:hover .whatsapp-tooltip { opacity: 1; visibility: visible; }
+
+/* CHAT WIDGET */
+.chat-widget { position: fixed; bottom: 24px; right: 24px; z-index: 998; }
+.chat-toggle { width: 60px; height: 60px; background: var(--color-primary); border: none; border-radius: var(--radius-full); cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); transition: transform var(--transition-base), background var(--transition-base); }
+.chat-toggle:hover { transform: scale(1.05); background: var(--color-primary-dark); }
+.chat-toggle svg { width: 28px; height: 28px; fill: var(--color-white); }
+.chat-icon-close { display: none; }
+.chat-widget.active .chat-icon-open { display: none; }
+.chat-widget.active .chat-icon-close { display: block; }
+.chat-container { position: absolute; bottom: 70px; right: 0; width: 360px; max-width: calc(100vw - 48px); background: var(--color-white); border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); overflow: hidden; display: none; flex-direction: column; }
+.chat-widget.active .chat-container { display: flex; }
+.chat-header { background: var(--color-primary); color: var(--color-white); padding: var(--space-md) var(--space-lg); display: flex; align-items: center; justify-content: space-between; }
+.chat-header-info { display: flex; align-items: center; gap: var(--space-md); }
+.chat-avatar { font-size: 1.5rem; }
+.chat-header-info strong { display: block; font-size: 0.9375rem; }
+.chat-status { font-size: 0.75rem; opacity: 0.8; }
+.chat-close { background: none; border: none; color: var(--color-white); font-size: 1.5rem; cursor: pointer; opacity: 0.8; transition: opacity var(--transition-fast); }
+.chat-close:hover { opacity: 1; }
+.chat-messages { flex: 1; padding: var(--space-md); max-height: 300px; overflow-y: auto; display: flex; flex-direction: column; gap: var(--space-md); }
+.chat-message { max-width: 85%; padding: var(--space-md); border-radius: var(--radius-lg); font-size: 0.9375rem; line-height: 1.5; white-space: pre-wrap; }
+.chat-message.bot { background: var(--color-gray-100); color: var(--color-gray-900); align-self: flex-start; border-bottom-left-radius: var(--radius-sm); }
+.chat-message.user { background: var(--color-primary); color: var(--color-white); align-self: flex-end; border-bottom-right-radius: var(--radius-sm); }
+.chat-options { padding: var(--space-md); display: flex; flex-direction: column; gap: var(--space-sm); }
+.chat-option { background: var(--color-off-white); border: 2px solid var(--color-gray-200); border-radius: var(--radius-md); padding: var(--space-md); cursor: pointer; font-size: 0.9375rem; text-align: left; transition: all var(--transition-fast); }
+.chat-option:hover { border-color: var(--color-primary); background: rgba(27, 94, 122, 0.05); }
+.chat-input-container { display: flex; gap: var(--space-sm); padding: var(--space-md); border-top: 1px solid var(--color-gray-200); }
+.chat-input { flex: 1; padding: var(--space-md); border: 2px solid var(--color-gray-200); border-radius: var(--radius-md); font-size: 0.9375rem; }
+.chat-input:focus { outline: none; border-color: var(--color-primary); }
+.chat-send { background: var(--color-primary); color: var(--color-white); border: none; padding: var(--space-md) var(--space-lg); border-radius: var(--radius-md); cursor: pointer; font-weight: 600; transition: background var(--transition-fast); }
+.chat-send:hover { background: var(--color-primary-dark); }
+
+@media (max-width: 480px) {
+    .chat-container { position: fixed; bottom: 0; right: 0; left: 0; width: 100%; max-width: 100%; border-radius: var(--radius-xl) var(--radius-xl) 0 0; max-height: 80vh; }
+    .chat-messages { max-height: 50vh; }
+}
+
+/* UTILITIES */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+*:focus-visible { outline: 3px solid var(--color-primary-light); outline-offset: 2px; }
+*:focus:not(:focus-visible) { outline: none; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.5s ease forwards; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <span class="logo-icon">💧</span>
+                <span class="logo-text">Irrigation Solution Group</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#brands" class="nav-link">Certifications</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+17868655288" class="phone-link">
+                    <span class="phone-icon">📞</span>
+                    <span class="phone-number">(786) 865-5288</span>
+                </a>
+                <a href="#contact" class="btn btn-primary header-cta">Get Free Estimate</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Expert Irrigation Solutions for a Greener Tomorrow</h1>
+            <p class="hero-subtitle">Professional sprinkler installation, repair, and maintenance for Broward and Dade County. Save water, save money, and keep your landscape thriving year-round.</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-primary btn-large">Get Your Free Estimate</a>
+                <a href="tel:+17868655288" class="btn btn-secondary btn-large">Call (786) 865-5288</a>
+            </div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span class="badge-icon">✓</span>
+                    <span>Licensed &amp; Insured</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="badge-icon">✓</span>
+                    <span>Rain Bird &amp; Hunter Certified</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="badge-icon">✓</span>
+                    <span>Free Estimates</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="badge-icon">🇪🇸</span>
+                    <span>Hablamos Español</span>
+                </div>
+                <div class="trust-badge emergency-badge">
+                    <span class="badge-icon">⚡</span>
+                    <span>24/7 Emergency Service</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <span class="proof-number">500+</span>
+                    <span class="proof-label">Systems Installed</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">15+</span>
+                    <span class="proof-label">Years Experience</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">4.9★</span>
+                    <span class="proof-label">Customer Rating</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">24/7</span>
+                    <span class="proof-label">Emergency Service</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Complete Irrigation Solutions</h2>
+                <p class="section-subtitle">From initial design to ongoing maintenance, we handle every aspect of your irrigation system with expertise and care.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Sprinkler Installation</h3>
+                    <p class="service-description">Custom irrigation systems engineered for your specific landscape, soil type, and water requirements. We use only professional-grade components.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">System Repairs</h3>
+                    <p class="service-description">Fast, reliable repairs for all sprinkler system brands. We diagnose issues quickly and fix them right the first time. Same-day service available.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Drip Irrigation</h3>
+                    <p class="service-description">Water-efficient drip irrigation for gardens, flower beds, trees, and shrubs. Delivers water directly to plant roots with minimal waste.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Smart Controllers</h3>
+                    <p class="service-description">Upgrade to weather-based smart controllers that automatically adjust watering schedules, saving up to 50% on water usage.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                            <path d="M7 8h2M11 8h2M15 8h2M7 12h10"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">VFDs &amp; PLCs Specialist</h3>
+                    <p class="service-description">Expert programming and installation of Variable Frequency Drives and Programmable Logic Controllers for advanced irrigation pump and system automation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                            <line x1="4" y1="22" x2="4" y2="15"/>
+                            <circle cx="18" cy="8" r="1.5" fill="currentColor" stroke="none"/>
+                            <circle cx="14" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">2-Wire Specialist</h3>
+                    <p class="service-description">Certified 2-wire decoder system installation and troubleshooting for Rain Bird and Hunter. Advanced diagnostics, repairs, and new installations for commercial and residential properties.</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Why Choose Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">Why Choose Irrigation Solution Group?</h2>
+                    <p class="about-text">With over 15 years of experience serving Broward and Dade County, we understand South Florida's unique irrigation challenges. From the sandy soils to the intense heat, we design systems that thrive in our climate.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-content">
+                                <h4>Licensed &amp; Fully Insured</h4>
+                                <p>Full liability coverage and workers' compensation for your protection.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-content">
+                                <h4>Certified Technicians</h4>
+                                <p>Factory-trained on major brands including Hunter, Rain Bird, and Toro.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-content">
+                                <h4>Transparent Pricing</h4>
+                                <p>Detailed written quotes with no hidden fees or surprise charges.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-content">
+                                <h4>Guaranteed Satisfaction</h4>
+                                <p>If you're not happy, we'll make it right - period.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-content">
+                                <h4>Same-Day Service</h4>
+                                <p>Emergency repairs available with prompt response times.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Customer Satisfaction</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-label">Average Water Savings</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">2hr</span>
+                        <span class="stat-label">Response Time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Join hundreds of satisfied customers throughout Broward and Dade County.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <blockquote class="testimonial-text">"After years of brown patches and high water bills, Irrigation Solution Group designed a system that actually works. Our lawn has never looked better and we're saving money on water!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Maria G.</strong>
+                            <span>Coral Springs, FL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <blockquote class="testimonial-text">"Fast, professional, and fairly priced. They diagnosed a leak that two other companies missed and fixed it same day. Highly recommend for any irrigation needs!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Roberto L.</strong>
+                            <span>Miami Gardens, FL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <blockquote class="testimonial-text">"We manage several commercial properties and use Irrigation Solution Group exclusively. Reliable, responsive, and their smart controller upgrades have saved us thousands."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>James T.</strong>
+                            <span>Fort Lauderdale, FL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands & Certifications Section -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certified &amp; Authorized</h2>
+                <p class="section-subtitle">Factory-trained specialists on industry-leading irrigation brands</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <svg viewBox="0 0 200 60" fill="currentColor">
+                            <text x="100" y="35" font-family="Arial Black, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#0066B2">RAIN BIRD</text>
+                            <text x="100" y="52" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">THE INTELLIGENT USE OF WATER</text>
+                        </svg>
+                    </div>
+                    <p>Authorized Rain Bird dealer and certified installer for residential and commercial 2-wire decoder systems.</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <svg viewBox="0 0 200 60" fill="currentColor">
+                            <text x="100" y="38" font-family="Arial Black, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1B5E20">HUNTER</text>
+                            <text x="100" y="52" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">INDUSTRIES</text>
+                        </svg>
+                    </div>
+                    <p>Hunter certified professional with expertise in IMMS and 2-wire decoder technology for large-scale projects.</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <svg viewBox="0 0 200 60" fill="currentColor">
+                            <text x="100" y="35" font-family="Arial Black, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#E65100">VFD/PLC</text>
+                            <text x="100" y="52" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">AUTOMATION SPECIALIST</text>
+                        </svg>
+                    </div>
+                    <p>Expert programming and troubleshooting of Variable Frequency Drives and Programmable Logic Controllers.</p>
+                </div>
+            </div>
+            <div class="certifications-bar">
+                <div class="cert-item">
+                    <span class="cert-icon">🏆</span>
+                    <span>Licensed Contractor</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-icon">✓</span>
+                    <span>Fully Insured</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-icon">📜</span>
+                    <span>2-Wire Certified</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-icon">⚡</span>
+                    <span>VFD/PLC Trained</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-icon">🇪🇸</span>
+                    <span>Hablamos Español</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="service-area">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proudly Serving South Florida</h2>
+                <p class="section-subtitle">Professional irrigation services throughout Broward and Miami-Dade County.</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-column">
+                    <h3>Broward County</h3>
+                    <ul>
+                        <li>Fort Lauderdale</li>
+                        <li>Hollywood</li>
+                        <li>Pembroke Pines</li>
+                        <li>Coral Springs</li>
+                        <li>Miramar</li>
+                        <li>Plantation</li>
+                    </ul>
+                </div>
+                <div class="area-column">
+                    <h3>Miami-Dade County</h3>
+                    <ul>
+                        <li>Miami</li>
+                        <li>Miami Beach</li>
+                        <li>Hialeah</li>
+                        <li>Miami Gardens</li>
+                        <li>Kendall</li>
+                        <li>Doral</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="area-note">Don't see your area? Give us a call - we may still be able to help!</p>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready for a Beautiful, Efficient Lawn?</h2>
+                    <p>Get a free on-site estimate with no obligation. Our experts will assess your property and provide a detailed quote within 24 hours.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="tel:+17868655288" class="btn btn-white">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Call Now
+                    </a>
+                    <a href="#contact" class="btn btn-outline-white">Request Free Estimate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common irrigation questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What is a 2-wire decoder system?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A 2-wire decoder system uses just two wires to communicate with all irrigation valves, instead of running individual wires to each valve. Rain Bird and Hunter make industry-leading systems that reduce installation costs and simplify troubleshooting on large properties. We're certified specialists in both brands.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What are VFDs and PLCs used for in irrigation?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Variable Frequency Drives (VFDs) control pump motor speed to match water demand, saving energy and reducing wear. Programmable Logic Controllers (PLCs) automate complex irrigation sequences, monitor system health, and integrate with building management systems. We specialize in programming and maintaining these advanced automation systems.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Do you service both residential and commercial properties?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We serve residential homes, HOAs, commercial properties, golf courses, sports fields, and municipal installations throughout Broward and Miami-Dade counties. Our expertise in advanced systems like 2-wire decoders and VFDs makes us especially qualified for large-scale commercial projects.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How much does a new irrigation system cost?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Costs vary based on property size, soil conditions, and system complexity. A typical residential system ranges from $2,500-$6,000, while commercial systems can range from $10,000 to $100,000+. We provide free on-site estimates with detailed breakdowns and financing options for qualified customers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What brands do you work with?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We're certified specialists for Rain Bird and Hunter — the two leading irrigation brands. We also work with Toro, Irritrol, Weathermatic, and most other major manufacturers. Our technicians receive ongoing factory training to stay current with the latest technology.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How quickly can you respond to repairs?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer same-day and next-day service for most repairs. Emergency services are available 24/7 for major leaks or system failures. Call us at (786) 865-5288 or message us on WhatsApp for the fastest response.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <h2 class="form-title">Get Your Free Estimate</h2>
+                    <p class="form-subtitle">Fill out this quick form and we'll contact you within 2 hours.</p>
+
+                    <form id="contact-form" method="POST" action="#contact">
+                        <input type="hidden" name="form_type" value="contact">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 123-4567" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@email.com" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service" class="form-label">Service Needed *</label>
+                                <select id="service" name="service" class="form-select" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="new-installation">New System Installation</option>
+                                    <option value="repair">Sprinkler Repair</option>
+                                    <option value="maintenance">Seasonal Maintenance</option>
+                                    <option value="smart-upgrade">Smart Controller Upgrade</option>
+                                    <option value="drip">Drip Irrigation</option>
+                                    <option value="consultation">Free Consultation</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Property Type</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="property_type" value="residential" checked>
+                                        <span>Residential</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="property_type" value="commercial">
+                                        <span>Commercial</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Tell us about your project (optional)</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Describe your irrigation needs or issues..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">Get My Free Estimate</button>
+
+                        <div class="form-trust">
+                            <span>✓ No spam, ever</span>
+                            <span>✓ Response within 2 hours</span>
+                            <span>✓ 100% free, no obligation</span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Get In Touch</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📞</div>
+                        <div class="contact-item-content">
+                            <span class="contact-item-label">Phone</span>
+                            <a href="tel:+17868655288" class="contact-item-value">(786) 865-5288</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">✉️</div>
+                        <div class="contact-item-content">
+                            <span class="contact-item-label">Email</span>
+                            <a href="mailto:somarribavladimir94@hotmail.com" class="contact-item-value">somarribavladimir94@hotmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">🕐</div>
+                        <div class="contact-item-content">
+                            <span class="contact-item-label">Hours</span>
+                            <span class="contact-item-value">Mon-Fri: 7am-6pm<br>Sat: 8am-2pm</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div class="contact-item-content">
+                            <span class="contact-item-label">Service Area</span>
+                            <span class="contact-item-value">Broward &amp; Miami-Dade County</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">🇪🇸</div>
+                        <div class="contact-item-content">
+                            <span class="contact-item-label">Languages</span>
+                            <span class="contact-item-value">English &amp; Español</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/17868655288?text=Hi!%20I'm%20interested%20in%20irrigation%20services" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Chat on WhatsApp
+                    </a>
+
+                    <div style="margin-top: var(--space-xl); text-align: center; background: rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg);">
+                        <p style="font-size: 0.9375rem; margin-bottom: var(--space-md); opacity: 0.9;">Scan to chat on WhatsApp</p>
+                        <div style="background: white; border-radius: var(--radius-md); padding: 12px; display: inline-block;">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzQgMTc0IiB3aWR0aD0iMTc0IiBoZWlnaHQ9IjE3NCI+CjxyZWN0IHdpZHRoPSIxNzQiIGhlaWdodD0iMTc0IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE4IiB5PSIxMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMjQiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIzMCIgeT0iMTIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjM2IiB5PSIxMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDIiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI0OCIgeT0iMTIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcyIiB5PSIxMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iODQiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDIiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDgiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMjAiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMjYiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzIiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzgiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNDQiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTAiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTYiIHk9IjEyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMiIgeT0iMTgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQ4IiB5PSIxOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNjAiIHk9IjE4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2NiIgeT0iMTgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijc4IiB5PSIxOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTYiIHk9IjE4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDIiIHk9IjE4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMjAiIHk9IjE4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTYiIHk9IjE4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMiIgeT0iMjQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzAiIHk9IjI0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIzNiIgeT0iMjQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQ4IiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzIiIHk9IjI0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI4NCIgeT0iMjQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijk2IiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTA4IiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIwIiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTMyIiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTM4IiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTQ0IiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTU2IiB5PSIyNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIyNCIgeT0iMzAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjMwIiB5PSIzMCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzYiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI0OCIgeT0iMzAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjY2IiB5PSIzMCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzgiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDgiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMjAiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzIiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzgiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNDQiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTYiIHk9IjMwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMiIgeT0iMzYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjI0IiB5PSIzNiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzAiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIzNiIgeT0iMzYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQ4IiB5PSIzNiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNjAiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI3MiIgeT0iMzYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijg0IiB5PSIzNiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTAiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDIiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDgiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMjAiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzIiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzgiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNDQiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTYiIHk9IjM2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMiIgeT0iNDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQ4IiB5PSI0MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNjYiIHk9IjQyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI3OCIgeT0iNDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjkwIiB5PSI0MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTAyIiB5PSI0MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTA4IiB5PSI0MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIwIiB5PSI0MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTU2IiB5PSI0MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIiIHk9IjQ4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxOCIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjI0IiB5PSI0OCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzAiIHk9IjQ4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIzNiIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQyIiB5PSI0OCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDgiIHk9IjQ4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2MCIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcyIiB5PSI0OCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iODQiIHk9IjQ4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5NiIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwOCIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyMCIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyNiIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEzMiIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEzOCIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE0NCIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1MCIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1NiIgeT0iNDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjY2IiB5PSI1NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzgiIHk9IjU0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5MCIgeT0iNTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwOCIgeT0iNTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyIiB5PSI2MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMjQiIHk9IjYwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIzNiIgeT0iNjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQ4IiB5PSI2MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzIiIHk9IjYwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI4NCIgeT0iNjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjkwIiB5PSI2MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTYiIHk9IjYwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzIiIHk9IjYwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTAiIHk9IjYwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxOCIgeT0iNjYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjMwIiB5PSI2NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDIiIHk9IjY2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI1NCIgeT0iNjYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjY2IiB5PSI2NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzgiIHk9IjY2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5MCIgeT0iNjYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijk2IiB5PSI2NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTE0IiB5PSI2NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIwIiB5PSI2NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTU2IiB5PSI2NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIiIHk9IjcyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIyNCIgeT0iNzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjM2IiB5PSI3MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDgiIHk9IjcyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2MCIgeT0iNzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcyIiB5PSI3MiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iODQiIHk9IjcyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5MCIgeT0iNzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyMCIgeT0iNzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyNiIgeT0iNzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE0NCIgeT0iNzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1MCIgeT0iNzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1NiIgeT0iNzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE4IiB5PSI3OCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzAiIHk9Ijc4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI0MiIgeT0iNzgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjU0IiB5PSI3OCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNjYiIHk9Ijc4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI3OCIgeT0iNzgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjkwIiB5PSI3OCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTAyIiB5PSI3OCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTUwIiB5PSI3OCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIiIHk9Ijg0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIyNCIgeT0iODQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjM2IiB5PSI4NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDgiIHk9Ijg0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2MCIgeT0iODQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcyIiB5PSI4NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iODQiIHk9Ijg0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5MCIgeT0iODQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijk2IiB5PSI4NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIwIiB5PSI4NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTI2IiB5PSI4NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTM4IiB5PSI4NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTUwIiB5PSI4NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTU2IiB5PSI4NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTgiIHk9IjkwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIzMCIgeT0iOTAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQyIiB5PSI5MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNTQiIHk9IjkwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2NiIgeT0iOTAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijc4IiB5PSI5MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iODQiIHk9IjkwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5MCIgeT0iOTAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijk2IiB5PSI5MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTE0IiB5PSI5MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIwIiB5PSI5MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTM4IiB5PSI5MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTU2IiB5PSI5MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIiIHk9Ijk2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIyNCIgeT0iOTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjM2IiB5PSI5NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDgiIHk9Ijk2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2MCIgeT0iOTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcyIiB5PSI5NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzgiIHk9Ijk2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI4NCIgeT0iOTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjExNCIgeT0iOTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyNiIgeT0iOTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE0NCIgeT0iOTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1MCIgeT0iOTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1NiIgeT0iOTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE4IiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjMwIiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQyIiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjU0IiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjY2IiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijg0IiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjkwIiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijk2IiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwOCIgeT0iMTAyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMTQiIHk9IjEwMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIwIiB5PSIxMDIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEzMiIgeT0iMTAyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTAiIHk9IjEwMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMjQiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzYiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDgiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNjAiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzIiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzgiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iODQiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTAiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTYiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTAyIiB5PSIxMDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwOCIgeT0iMTA4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMTQiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIwIiB5PSIxMDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyNiIgeT0iMTA4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzIiIHk9IjEwOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTM4IiB5PSIxMDgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjYwIiB5PSIxMTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjY2IiB5PSIxMTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijc4IiB5PSIxMTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjkwIiB5PSIxMTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijk2IiB5PSIxMTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwMiIgeT0iMTE0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDgiIHk9IjExNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTMyIiB5PSIxMTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEzOCIgeT0iMTE0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTAiIHk9IjExNCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTU2IiB5PSIxMTQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyIiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE4IiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjI0IiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjMwIiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjM2IiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQyIiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQ4IiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcyIiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijg0IiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwMiIgeT0iMTIwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDgiIHk9IjEyMCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIwIiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEzMiIgeT0iMTIwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzgiIHk9IjEyMCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTUwIiB5PSIxMjAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1NiIgeT0iMTIwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMiIgeT0iMTI2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI0OCIgeT0iMTI2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2NiIgeT0iMTI2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI3OCIgeT0iMTI2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5MCIgeT0iMTI2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5NiIgeT0iMTI2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDIiIHk9IjEyNiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTA4IiB5PSIxMjYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEzMiIgeT0iMTI2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzgiIHk9IjEyNiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMjQiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzAiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzYiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDgiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNjAiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzIiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNzgiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTAiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTYiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTA4IiB5PSIxMzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjExNCIgeT0iMTMyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMjAiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTI2IiB5PSIxMzIiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEzMiIgeT0iMTMyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzgiIHk9IjEzMiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTIiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMjQiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzAiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMzYiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNDgiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iNjYiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTAiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iOTYiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTI2IiB5PSIxMzgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEzMiIgeT0iMTM4IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzgiIHk9IjEzOCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTQ0IiB5PSIxMzgiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyIiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjI0IiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjMwIiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjM2IiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjQ4IiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjYwIiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjcyIiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijg0IiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjkwIiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9Ijk2IiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEwMiIgeT0iMTQ0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDgiIHk9IjE0NCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTMyIiB5PSIxNDQiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1NiIgeT0iMTQ0IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMiIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI0OCIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2NiIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI3OCIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5MCIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDIiIHk9IjE1MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTA4IiB5PSIxNTAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjEyMCIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMzIiIHk9IjE1MCIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTM4IiB5PSIxNTAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1MCIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMiIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxOCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIyNCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIzMCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIzNiIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI0MiIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI0OCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI2MCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI3MiIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI3OCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5MCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSI5NiIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMDIiIHk9IjE1NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTA4IiB5PSIxNTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjExNCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxMjAiIHk9IjE1NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPHJlY3QgeD0iMTI2IiB5PSIxNTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9ImJsYWNrIi8+CjxyZWN0IHg9IjE1MCIgeT0iMTU2IiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSJibGFjayIvPgo8cmVjdCB4PSIxNTYiIHk9IjE1NiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+" alt="WhatsApp QR Code - Scan to contact Irrigation Solution Group" style="width: 160px; height: 160px;">
+                        </div>
+                        <p style="font-size: 0.8rem; margin-top: var(--space-sm); opacity: 0.7;">Point your phone camera at the code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">💧</span>
+                        <span class="logo-text">Irrigation Solution Group</span>
+                    </a>
+                    <p class="footer-tagline">Professional irrigation services for Broward and Dade County. Keeping South Florida green since 2009.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/17868655288" class="social-link whatsapp" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#brands">Certifications</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Sprinkler Installation</a></li>
+                        <li><a href="#services">System Repairs</a></li>
+                        <li><a href="#services">Drip Irrigation</a></li>
+                        <li><a href="#services">Smart Controllers</a></li>
+                        <li><a href="#services">VFDs &amp; PLCs</a></li>
+                        <li><a href="#services">2-Wire Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><a href="tel:+17868655288">(786) 865-5288</a></p>
+                    <p><a href="mailto:somarribavladimir94@hotmail.com">somarribavladimir94@hotmail.com</a></p>
+                    <p>Broward &amp; Miami-Dade County, FL</p>
+                    <p style="margin-top: var(--space-md); font-size: 0.875rem;"><strong>Hours:</strong><br>Mon-Fri: 7am - 6pm<br>Sat: 8am - 2pm<br>Emergency: 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Irrigation Solution Group. All rights reserved.</p>
+                <p>Licensed &amp; Insured | Hablamos Español | Serving South Florida</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/17868655288?text=Hi!%20I'm%20interested%20in%20irrigation%20services" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
+            <svg class="chat-icon-open" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L2 22l5.71-.97A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 15h2v2h-2v-2zm0-10h2v8h-2V7z"/>
+            </svg>
+            <svg class="chat-icon-close" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            </svg>
+        </button>
+        <div id="chat-container" class="chat-container">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <span class="chat-avatar">💧</span>
+                    <div>
+                        <strong>Irrigation Assistant</strong>
+                        <span class="chat-status">Online</span>
+                    </div>
+                </div>
+                <button id="chat-close" class="chat-close">&times;</button>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <div id="chat-options" class="chat-options"></div>
+            <div id="chat-input-container" class="chat-input-container" style="display: none;">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
+                <button id="chat-send" class="chat-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Main JS
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const nav = document.getElementById('nav');
+        if (mobileMenuToggle && nav) {
+            mobileMenuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+            nav.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                });
+            });
+        }
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 50) { header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Form submitted! (This is a preview — PHP form handling requires a live server.)');
+            });
+        }
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.service-card, .testimonial-card, .stat-card, .feature-item');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('animate-fade-in');
+                }
+            });
+        };
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll();
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    if (value.length <= 3) { value = '(' + value; }
+                    else if (value.length <= 6) { value = '(' + value.substring(0, 3) + ') ' + value.substring(3); }
+                    else { value = '(' + value.substring(0, 3) + ') ' + value.substring(3, 6) + '-' + value.substring(6, 10); }
+                }
+                e.target.value = value;
+            });
+        });
+    });
+
+    // Chatbot JS
+    class IrrigationChatBot {
+        constructor() {
+            this.chatWidget = document.getElementById('chat-widget');
+            this.chatToggle = document.getElementById('chat-toggle');
+            this.chatClose = document.getElementById('chat-close');
+            this.chatMessages = document.getElementById('chat-messages');
+            this.chatOptions = document.getElementById('chat-options');
+            this.chatInputContainer = document.getElementById('chat-input-container');
+            this.chatInput = document.getElementById('chat-input');
+            this.chatSend = document.getElementById('chat-send');
+            this.userData = {};
+            this.currentStep = 'welcome';
+            this.conversationFlow = {
+                welcome: { message: "Hi! 👋 I'm the Irrigation Solution Group assistant. ¡Hablamos Español! How can I help you today?", options: [
+                    { text: "Get a Free Quote", next: 'service_type' },
+                    { text: "Schedule a Repair", next: 'repair_info' },
+                    { text: "Ask a Question", next: 'question' },
+                    { text: "Talk to Someone", next: 'contact_preference' },
+                    { text: "Prefiero Español", next: 'spanish_contact' }
+                ]},
+                spanish_contact: { message: "¡Por supuesto! Puede llamarnos o enviarnos un mensaje por WhatsApp. Nuestro equipo habla español y estará encantado de ayudarle.", options: [
+                    { text: "Llamar (786) 865-5288", action: 'call' },
+                    { text: "WhatsApp en Español", action: 'whatsapp_spanish' },
+                    { text: "Continue in English", next: 'welcome' }
+                ]},
+                service_type: { message: "Great! What type of irrigation service are you interested in?", options: [
+                    { text: "New System Installation", next: 'property_type', value: 'New Installation' },
+                    { text: "Drip Irrigation", next: 'property_type', value: 'Drip Irrigation' },
+                    { text: "Smart Controller Upgrade", next: 'property_type', value: 'Smart Controller' },
+                    { text: "VFDs & PLCs", next: 'property_type', value: 'VFDs & PLCs' },
+                    { text: "2-Wire Systems (Rain Bird/Hunter)", next: 'property_type', value: '2-Wire Systems' }
+                ]},
+                repair_info: { message: "I understand you need a repair. What seems to be the issue?", options: [
+                    { text: "Broken Sprinkler Heads", next: 'property_type', value: 'Broken Heads' },
+                    { text: "Low Water Pressure", next: 'property_type', value: 'Low Pressure' },
+                    { text: "Leaking Pipes", next: 'property_type', value: 'Leak' },
+                    { text: "Controller Issues", next: 'property_type', value: 'Controller Problem' },
+                    { text: "2-Wire System Problems", next: 'property_type', value: '2-Wire Repair' },
+                    { text: "VFD/PLC Issues", next: 'property_type', value: 'VFD/PLC Repair' },
+                    { text: "Other Problem", next: 'describe_issue' }
+                ]},
+                describe_issue: { message: "Please describe the issue you're experiencing:", input: true, field: 'issue_description', next: 'property_type' },
+                property_type: { message: "Is this for a residential or commercial property?", options: [
+                    { text: "Residential", next: 'get_name', value: 'Residential' },
+                    { text: "Commercial", next: 'get_name', value: 'Commercial' }
+                ]},
+                get_name: { message: "Thanks! What's your name?", input: true, field: 'name', next: 'get_phone' },
+                get_phone: { message: "And what's the best phone number to reach you?", input: true, field: 'phone', next: 'get_location' },
+                get_location: { message: "Which area are you located in?", options: [
+                    { text: "Broward County", next: 'confirm', value: 'Broward County' },
+                    { text: "Miami-Dade County", next: 'confirm', value: 'Miami-Dade County' }
+                ]},
+                question: { message: "What would you like to know?", options: [
+                    { text: "How much does installation cost?", next: 'answer_cost' },
+                    { text: "Tell me about 2-wire systems", next: 'answer_2wire' },
+                    { text: "What are VFDs and PLCs?", next: 'answer_vfd' },
+                    { text: "Do you offer warranties?", next: 'answer_warranty' },
+                    { text: "What areas do you serve?", next: 'answer_area' }
+                ]},
+                answer_2wire: { message: "2-wire decoder systems (Rain Bird & Hunter) use just two wires to control all valves - perfect for large properties! Benefits include: reduced installation costs, easier troubleshooting, and easier future expansion. We're certified specialists in both Rain Bird and Hunter 2-wire systems.", options: [
+                    { text: "Get a 2-wire quote", next: 'get_name' },
+                    { text: "I have another question", next: 'question' },
+                    { text: "No thanks", next: 'goodbye' }
+                ]},
+                answer_vfd: { message: "VFDs (Variable Frequency Drives) control pump speed to match demand, saving energy and reducing wear. PLCs (Programmable Logic Controllers) automate complex irrigation sequences and integrate with building systems. We specialize in programming, installation, and troubleshooting these advanced systems.", options: [
+                    { text: "Get a VFD/PLC quote", next: 'get_name' },
+                    { text: "I have another question", next: 'question' },
+                    { text: "No thanks", next: 'goodbye' }
+                ]},
+                answer_cost: { message: "Great question! The cost depends on your property size and needs. Most residential systems range from $2,500 to $6,000. We offer FREE on-site estimates with no obligation. Would you like to schedule one?", options: [
+                    { text: "Yes, get a free estimate", next: 'get_name' },
+                    { text: "I have another question", next: 'question' },
+                    { text: "No thanks", next: 'goodbye' }
+                ]},
+                answer_time: { message: "Most residential irrigation systems are completed in 1-2 days. Larger commercial projects may take 3-5 days. We'll provide a specific timeline with your quote.", options: [
+                    { text: "Get a free quote", next: 'get_name' },
+                    { text: "I have another question", next: 'question' },
+                    { text: "No thanks", next: 'goodbye' }
+                ]},
+                answer_warranty: { message: "Absolutely! We provide a 2-year warranty on all workmanship. Equipment warranties range from 1-5 years depending on the product. We handle all warranty claims for equipment we install.", options: [
+                    { text: "Get a free quote", next: 'get_name' },
+                    { text: "I have another question", next: 'question' },
+                    { text: "No thanks", next: 'goodbye' }
+                ]},
+                answer_area: { message: "We proudly serve all of Broward County and Miami-Dade County, including Fort Lauderdale, Hollywood, Coral Springs, Miami, Hialeah, and surrounding areas. Are you in our service area?", options: [
+                    { text: "Yes! Get a free quote", next: 'get_name' },
+                    { text: "I have another question", next: 'question' },
+                    { text: "I'm not sure", next: 'contact_preference' }
+                ]},
+                contact_preference: { message: "Would you prefer to call us directly or chat on WhatsApp?", options: [
+                    { text: "Call (786) 865-5288", action: 'call' },
+                    { text: "Chat on WhatsApp", action: 'whatsapp' },
+                    { text: "Have someone call me", next: 'get_name' }
+                ]},
+                confirm: { message: "Thanks, {name}! Here's a summary of your request:\n\n• Service: {service}\n• Property: {property}\n• Location: {location}\n• Phone: {phone}\n\nWe'll contact you within 2 hours to discuss your project!", options: [
+                    { text: "Submit Request", action: 'submit' },
+                    { text: "Start Over", next: 'welcome' }
+                ]},
+                submitted: { message: "Your request has been submitted! A member of our team will contact you within 2 hours at {phone}.\n\nNeed immediate assistance? Call us at (786) 865-5288 or chat on WhatsApp.", options: [
+                    { text: "Call Now", action: 'call' },
+                    { text: "Chat on WhatsApp", action: 'whatsapp' },
+                    { text: "Done", action: 'close' }
+                ]},
+                goodbye: { message: "No problem! If you ever need irrigation services, we're here to help. You can reach us at (786) 865-5288 or chat anytime.", options: [
+                    { text: "Start New Conversation", next: 'welcome' },
+                    { text: "Close Chat", action: 'close' }
+                ]}
+            };
+            this.init();
+        }
+        init() {
+            this.chatToggle.addEventListener('click', () => this.toggleChat());
+            this.chatClose.addEventListener('click', () => this.closeChat());
+            this.chatSend.addEventListener('click', () => this.handleInput());
+            this.chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') this.handleInput(); });
+            this.chatToggle.addEventListener('click', () => {
+                if (!this.chatWidget.classList.contains('started')) {
+                    this.startConversation();
+                    this.chatWidget.classList.add('started');
+                }
+            });
+        }
+        toggleChat() { this.chatWidget.classList.toggle('active'); }
+        closeChat() { this.chatWidget.classList.remove('active'); }
+        startConversation() { this.userData = {}; this.currentStep = 'welcome'; this.chatMessages.innerHTML = ''; this.showStep('welcome'); }
+        showStep(stepName) {
+            const step = this.conversationFlow[stepName];
+            if (!step) return;
+            this.currentStep = stepName;
+            let message = step.message;
+            message = message.replace('{name}', this.userData.name || 'there');
+            message = message.replace('{service}', this.userData.service || 'Not specified');
+            message = message.replace('{property}', this.userData.property || 'Not specified');
+            message = message.replace('{location}', this.userData.location || 'Not specified');
+            message = message.replace('{phone}', this.userData.phone || 'Not provided');
+            this.addMessage(message, 'bot');
+            this.chatOptions.innerHTML = '';
+            if (step.input) {
+                this.chatInputContainer.style.display = 'flex';
+                this.chatOptions.style.display = 'none';
+                this.chatInput.placeholder = step.message.includes('name') ? 'Your name...' : step.message.includes('phone') ? '(555) 123-4567' : 'Type your message...';
+                this.chatInput.focus();
+            } else if (step.options) {
+                this.chatInputContainer.style.display = 'none';
+                this.chatOptions.style.display = 'flex';
+                step.options.forEach(option => {
+                    const button = document.createElement('button');
+                    button.className = 'chat-option';
+                    button.textContent = option.text;
+                    button.addEventListener('click', () => this.handleOption(option));
+                    this.chatOptions.appendChild(button);
+                });
+            }
+            this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+        }
+        addMessage(text, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${type}`;
+            messageDiv.textContent = text;
+            this.chatMessages.appendChild(messageDiv);
+            this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+        }
+        handleOption(option) {
+            this.addMessage(option.text, 'user');
+            if (option.value) {
+                if (this.currentStep === 'service_type' || this.currentStep === 'repair_info') { this.userData.service = option.value; }
+                else if (this.currentStep === 'property_type') { this.userData.property = option.value; }
+                else if (this.currentStep === 'get_location') { this.userData.location = option.value; }
+            }
+            if (option.action) { this.handleAction(option.action); return; }
+            if (option.next) { setTimeout(() => this.showStep(option.next), 500); }
+        }
+        handleInput() {
+            const value = this.chatInput.value.trim();
+            if (!value) return;
+            const step = this.conversationFlow[this.currentStep];
+            this.addMessage(value, 'user');
+            if (step.field) { this.userData[step.field] = value; }
+            this.chatInput.value = '';
+            if (step.next) { setTimeout(() => this.showStep(step.next), 500); }
+        }
+        handleAction(action) {
+            switch (action) {
+                case 'call': window.location.href = 'tel:+17868655288'; break;
+                case 'whatsapp':
+                    const msg = encodeURIComponent(`Hi! I'm ${this.userData.name || 'interested in irrigation services'}. I need help with: ${this.userData.service || 'irrigation services'}.`);
+                    window.open(`https://wa.me/17868655288?text=${msg}`, '_blank'); break;
+                case 'whatsapp_spanish':
+                    const msgEs = encodeURIComponent(`¡Hola! Me interesa los servicios de irrigación. ¿Pueden ayudarme?`);
+                    window.open(`https://wa.me/17868655288?text=${msgEs}`, '_blank'); break;
+                case 'submit': this.submitLead(); break;
+                case 'close': this.closeChat(); break;
+            }
+        }
+        submitLead() {
+            // In preview mode, simulate successful submission
+            console.log('Lead submitted:', this.userData);
+            setTimeout(() => this.showStep('submitted'), 500);
+        }
+    }
+
+    // Initialize chatbot
+    document.addEventListener('DOMContentLoaded', function() {
+        new IrrigationChatBot();
+    });
+    </script>
+</body>
+</html>
