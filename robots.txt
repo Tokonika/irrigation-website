@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tokonika.github.io/irrigation-website/sitemap.xml
+Sitemap: https://www.irrigationssolutions.com/sitemap.xml
