@@ -31,41 +31,119 @@
         <meta property="og:url" content="https://www.irrigationssolutions.com/">
         <meta property="og:locale" content="en_US">
 
-        <!-- Structured Data / Schema Markup -->
-        <script type="application/ld+json">
-                {
-                  "@context": "https://schema.org",
-                  "@type": "LocalBusiness",
-                  "name": "Irrigation Solution Group",
-                  "description": "Professional sprinkler and irrigation services in Broward and Miami-Dade County, Florida. Licensed and insured with 15+ years of experience. Installation, repair, and maintenance.",
-                  "url": "https://www.irrigationssolutions.com/",
-                  "telephone": "+1-786-865-5288",
-                  "email": "somarribavladimir94@hotmail.com",
-                  "areaServed": [
-                    {"@type": "County", "name": "Broward County, FL"},
-                    {"@type": "County", "name": "Miami-Dade County, FL"}
-                  ],
-                  "serviceType": ["Sprinkler Installation", "Irrigation Repair", "Drip Irrigation", "Smart Controller Installation", "2-Wire Decoder Systems", "VFD/PLC Automation"],
-                  "openingHoursSpecification": [
-                    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "18:00"},
-                    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00"}
-                  ],
-                  "priceRange": "$$",
-                  "knowsLanguage": ["English", "Spanish"],
-                  "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "Irrigation Services",
-                    "itemListElement": [
-                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sprinkler System Installation"}},
-                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Irrigation System Repair"}},
-                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Drip Irrigation Installation"}},
-                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Smart Controller Upgrade"}},
-                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "2-Wire Decoder System Installation"}},
-                      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "VFD and PLC Programming"}}
-                    ]
-                  }
-                }
-        </script>
+        <!-- ============ LOCAL BUSINESS SCHEMA ============ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://www.irrigationssolutions.com/#business",
+      "name": "Irrigation Solution Group",
+      "alternateName": "Irrigation Solutions Group",
+      "description": "Professional sprinkler and irrigation services in Broward and Miami-Dade County, Florida. Licensed and insured with 15+ years of experience. Installation, repair, maintenance, 2-wire decoder systems, VFD/PLC automation.",
+      "url": "https://www.irrigationssolutions.com/",
+      "telephone": "+1-786-865-5288",
+      "email": "somarribavladimir94@hotmail.com",
+      "priceRange": "$$",
+      "foundingDate": "2009",
+      "knowsLanguage": ["English", "Spanish"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fort Lauderdale",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Broward County, FL" },
+        { "@type": "AdministrativeArea", "name": "Miami-Dade County, FL" },
+        { "@type": "City", "name": "Fort Lauderdale" },
+        { "@type": "City", "name": "Hollywood" },
+        { "@type": "City", "name": "Pembroke Pines" },
+        { "@type": "City", "name": "Coral Springs" },
+        { "@type": "City", "name": "Miramar" },
+        { "@type": "City", "name": "Plantation" },
+        { "@type": "City", "name": "Miami" },
+        { "@type": "City", "name": "Miami Beach" },
+        { "@type": "City", "name": "Hialeah" },
+        { "@type": "City", "name": "Miami Gardens" },
+        { "@type": "City", "name": "Kendall" },
+        { "@type": "City", "name": "Doral" }
+      ],
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Irrigation Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sprinkler System Installation", "description": "Custom-designed sprinkler systems for residential and commercial properties." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Irrigation System Repair", "description": "Fast, reliable repairs for all sprinkler brands. Same-day service available." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drip Irrigation Installation", "description": "Water-efficient drip systems for gardens, flower beds, and trees." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart Controller Upgrade", "description": "Weather-based smart controllers saving up to 50% on water." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "2-Wire Decoder Systems", "description": "Certified Rain Bird and Hunter 2-wire decoder installation and repair." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VFD and PLC Automation", "description": "Variable Frequency Drive and Programmable Logic Controller programming and installation." } }
+        ]
+      }
+    }
+    </script>
+
+    <!-- ============ FAQ SCHEMA ============ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a 2-wire decoder system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 2-wire decoder system uses just two wires to communicate with all irrigation valves, instead of running individual wires to each valve. Rain Bird and Hunter make industry-leading systems that reduce installation costs and simplify troubleshooting on large properties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are VFDs and PLCs used for in irrigation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Variable Frequency Drives (VFDs) control pump motor speed to match water demand, saving energy and reducing wear. Programmable Logic Controllers (PLCs) automate complex irrigation sequences, monitor system health, and integrate with building management systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you service both residential and commercial properties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We serve residential homes, HOAs, commercial properties, golf courses, sports fields, and municipal installations throughout Broward and Miami-Dade counties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a new irrigation system cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A typical residential system ranges from $2,500 to $6,000, while commercial systems range from $10,000 to $100,000 or more. We provide free on-site estimates with detailed breakdowns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What brands do you work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are certified specialists for Rain Bird and Hunter. We also work with Toro, Irritrol, Weathermatic, and most other major irrigation manufacturers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can you respond to repairs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer same-day and next-day service for most repairs. Emergency services are available 24/7 for major leaks or system failures."
+          }
+        }
+      ]
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
@@ -684,7 +762,7 @@ h1 { font-size: 3rem; } h2 { font-size: 2.5rem; } h3 { font-size: 1.5rem; } h4 {
             <div class="section-header">
                 <h2 class="section-title">Certified &amp; Authorized</h2>
                 <p class="section-subtitle">Factory-trained specialists on industry-leading irrigation brands</p>
-            </div>
+            </div>h
             <div class="brands-grid">
                 <div class="brand-card">
                     <div class="brand-logo">
